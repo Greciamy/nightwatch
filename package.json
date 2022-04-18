@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "debug": "node --inspect-brk C:\\Users\\grecia.machaca\\AppData\\Roaming\\npm\\node_modules\\nightwatch\\bin\\nightwatch",
     "test": "nightwatch"
   },
   "keywords": [],
