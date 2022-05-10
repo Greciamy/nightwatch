@@ -5,12 +5,24 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk C:\\Users\\grecia.machaca\\AppData\\Roaming\\npm\\node_modules\\nightwatch\\bin\\nightwatch",
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "env CONSOLIDATE=1 npm run test:vrt",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^99.0.0"
+    "chromedriver": "^99.0.0",
+    "cucumber": "^6.0.5",
+    "cucumber-pretty": "^6.0.1",
+    "nightwatch-api": "^3.0.2"
+  },
+  "dependencies": {
+    "@nightwatch/selenium-server": "^4.1.2",
+    "dotenv": "^16.0.0",
+    "nightwatch-vrt": "^0.2.10"
   }
 }
